@@ -62,7 +62,7 @@ const App = () => {
 
   useEffect(() => {
     window
-      .fetch('/data.json')
+      .fetch('data.json')
       .then((response) => response.json())
       .then((data) =>{
         const companies = new Set()
@@ -159,7 +159,7 @@ const App = () => {
         </section>
         <footer className="footer">
           <div className="content has-text-centered">
-            <p>&copy;2019 メンバー1, メンバー2, メンバー3</p>
+            <p>&copy;2020 上野瑞貴, 出口翼, 野村理紗</p>
           </div>
         </footer>
     </>
