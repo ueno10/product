@@ -126,30 +126,34 @@ const App = () => {
         <section className="section">
           <div className="container">
             <div className="content has-text-centered">
-              <h3>2019年度尾上ゼミ 情報科学講究1 課題制作</h3>
-              <h1>タイトル</h1>
+              <h3>2019年度尾上ゼミ 情報科学講究2 課題制作</h3>
+              <h1>sunburstを用いた建設会社の国家事業可視化</h1>
               <p>これはデータの説明です。</p>
               <p>これは可視化の説明です。</p>
+
               {
                 data.map((data) => {
                   return(
-                     <div style={{width: '600px', height: '600px'}} > 
-                       <ResponsiveSunburst
-                        data={data}
-                        margin={{ top: 40, right: 20, bottom: 20, left: 20 }}
-                        identity="name"
-                        value="amount"
-                        cornerRadius={2}
-                        borderWidth={1}
-                        borderColor="white"
-                        colors={(item) => item.color}
-                        childColor={{ from: 'color', modifiers: [] }}
-                        animate={true}
-                        motionStiffness={90}
-                        motionDamping={15}
-                        isInteractive={true}
-                       />
+                    <center>
+                      <h3>{data.name}</h3>
+                      <div style={{width: '600px', height: '600px'}} > 
+                        <ResponsiveSunburst
+                          data={data}
+                          margin={{ top: 10, right: 20, bottom: 50, left: 10 }}
+                          identity="name"
+                          value="amount"
+                          cornerRadius={2}
+                          borderWidth={1}
+                          borderColor="white"
+                          colors={(item) => item.color}
+                          childColor={{ from: 'color', modifiers: [] }}
+                          animate={true}
+                          motionStiffness={90}
+                          motionDamping={15}
+                          isInteractive={true}
+                        />
                       </div>
+                    </center>
                   )
                 })
               }
